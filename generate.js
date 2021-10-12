@@ -22,7 +22,7 @@ fetch(
             logoURI.trim() ===
             `https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/${address}/logo.png`
           ) {
-            rest.logoURI = 1;
+            rest.logoURI = "ok";
           } else {
             rest.logoURI = logoURI;
           }
