@@ -10,7 +10,7 @@ fetch(
 
     return list.tokens
       .filter((t) => t.chainId === 101)
-      .map(({ address, symbol, name, decimals, logoURI, tags }) => {
+      .map(({ address, symbol, name, decimals, logoURI, tags, extensions }) => {
         const rest = {};
 
         rest.symbol = symbol;
@@ -36,6 +36,7 @@ fetch(
         //   rest.tags = [];
         // }
         rest.tags = tags;
+        rest.coingeckoId = extensions?.coingeckoId;
 
         return [address, rest];
       })
